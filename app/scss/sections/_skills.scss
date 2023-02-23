@@ -1,0 +1,64 @@
+
+@use '../util/' as *;
+
+//SKILL SECTION STYLES 
+
+#skills{
+    padding-bottom: 109px;
+
+    .skills-container{
+        padding-inline: rem(30);
+        background: 
+                linear-gradient(180deg, rgba(205, 182, 213, 0) 0.8%, 
+                 #C1AAD2 34.13%, #BFA1CA 50.13%,
+                 rgba(191, 161, 202, 0) 100%);
+        
+        color:var(--skills-color);         
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: center;
+        align-content: center;
+        gap: rem(15) rem(38);
+     
+
+
+        .skill-block{
+            background: none;
+            display: flex;
+            column-gap: 5.77px;
+
+                svg{
+                display: block;
+                width: rem(40);
+                height: 44.94px;
+                background: none;
+
+                @include breakpoint-up(medium){
+                width: rem(78.71);
+                height: rem(80);
+                }
+                }
+                span{
+                    background: none;
+                    font-size: clamp(0.75rem, 0.063rem + 3.056vw, 2.813rem);
+                }
+
+
+
+        }//skill-block
+
+    }//skills-container
+
+.skills-quote{
+    margin-right: 26px;
+    margin-left: 66%;
+}
+.skills-cicle{
+    margin-top: -64%;
+    background: none;
+    margin-left: -27%;
+    position: relative;
+    z-index:1;
+}
+
+}//#skills

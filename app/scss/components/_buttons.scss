@@ -1,0 +1,38 @@
+
+@use '../util/' as *;
+
+
+    .-btn{
+        margin-block-end: rem(14);
+        border: none;
+        border-radius: rem(20);
+        background-color: var(--btn-color);
+        font-size: rem(12);
+        line-height: 15px;
+        text-align: center;
+        color: var(--white);
+        width: rem(117);
+        height: rem(28);
+        cursor: pointer;
+        &:hover{
+            background-color:var(--btn-color-hover);
+        }
+
+        @include breakpoint-up(medium){
+            margin-bottom: rem(59);
+            margin-right: rem(261.98);
+            font-size: rem(15);
+            width: rem(142);
+            height: rem(34);
+        }
+
+    }
+
+    #about-btn{
+        margin: 21px;
+    
+    @include breakpoint-up(medium){        
+        }
+    
+    }
+

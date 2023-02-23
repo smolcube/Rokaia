@@ -1,0 +1,19 @@
+{
+  "name": "js---personal-website",
+  "version": "1.0.0",
+  "description": "personal website",
+  "main": "index.js",
+  
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smolcube/Rokaia"
+  },
+  "scripts": {
+    "compile": "sass --watch main.scss ./dist/style.css"
+  },
+  "author": "Rokaia",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.58.0"
+  }
+}

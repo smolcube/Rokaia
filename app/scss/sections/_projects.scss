@@ -1,0 +1,32 @@
+@use '../util/' as *;
+
+// THE PROJECTS SECTION STYLES
+
+#projects{
+
+    
+    .projects-container{
+        display: grid;
+        grid-template-columns: rem(297.44);
+        grid-template-rows: repeat(4, rem(259.98));
+        gap: 18px 0;
+        justify-content: center;
+
+        .projects{
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            filter: drop-shadow(2px 4px 0px #816969);
+        }
+
+        .project-footer{ 
+            margin-inline: auto;
+            margin-block: rem(36.02) rem(25);
+             
+            p{
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 15px;
+            } 
+        }
+    }
+}

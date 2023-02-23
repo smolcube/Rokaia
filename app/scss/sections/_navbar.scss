@@ -1,0 +1,58 @@
+
+@use '../util/' as *;
+
+//navigation bar styles
+
+#head{
+    padding: rem(30) rem(30) rem(52.66) rem(30);
+
+    @include breakpoint-up(medium){
+    padding: 30px 30px 151px 30px ;  
+    }
+}
+
+.nav-container{
+    border-bottom: 1px black solid ;
+    a{
+        display: none;
+        color: var(--font-color);
+        &:hover{
+            color: var(--font-color-hover);
+        }
+            @include breakpoint-up(medium){
+            display: block;
+            
+        }
+    }
+    
+    .navbar-items{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        #menu{
+            border: none;
+            margin-bottom: rem(14.34);
+            cursor: pointer;
+            
+            @include breakpoint-up(medium){
+                display: none;
+            }
+
+           svg:hover{
+                fill:var( --btn-color-hover);
+            }
+        }    
+              
+        #logo{
+            margin-bottom: rem(10);
+
+            @include breakpoint-up(medium){
+                width: 39px;
+                height: 58px;
+            }
+        }
+    }
+
+
+}

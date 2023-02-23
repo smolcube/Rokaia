@@ -1,0 +1,31 @@
+@use '../util/' as *;
+
+.titles{
+    padding-top: 4.8px;
+    margin-bottom: 66.46px;
+    padding-left: 30px;
+    width: rem(270);
+    height: rem(43.54);
+    font-size: rem(25);
+    font-weight: 700;
+    line-height: 31px;
+    background: 
+        linear-gradient(90deg, var(--primary) 50%, 
+                               var(--secondary) 95.19%);  
+        
+
+        h1{
+            background: none;
+            }
+    
+        @include breakpoint-up(medium){
+            padding-top: 26px;
+            padding-left: 68px;
+            width: rem(555.8);
+            height: rem(81.8);
+
+
+        h1{font-size: rem(45);}
+    }
+    
+    } 

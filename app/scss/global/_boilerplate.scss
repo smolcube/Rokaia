@@ -1,0 +1,14 @@
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    font-family: 'Source Code Pro', monospace;
+}
+body{
+    width: 100%;
+}
