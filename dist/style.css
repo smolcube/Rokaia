@@ -190,6 +190,7 @@ a:hover {
   }
 }
 #about .about-container {
+  margin-bottom: 1.875rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, auto);
@@ -198,7 +199,7 @@ a:hover {
 }
 @media (min-width: 37.5em) {
   #about .about-container {
-    width: 609.98px;
+    min-width: 75%;
     height: 314px;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
@@ -271,7 +272,8 @@ a:hover {
   padding-bottom: 109px;
 }
 #skills .skills-container {
-  padding-inline: 1.875rem;
+  margin: auto;
+  padding-inline: 3.125rem;
   background: linear-gradient(180deg, rgba(205, 182, 213, 0) 0.8%, #C1AAD2 34.13%, #BFA1CA 50.13%, rgba(191, 161, 202, 0) 100%);
   color: var(--skills-color);
   display: grid;
@@ -283,7 +285,8 @@ a:hover {
 #skills .skills-container .skill-block {
   background: none;
   display: flex;
-  column-gap: 5.77px;
+  align-items: center;
+  column-gap: 40px;
 }
 #skills .skills-container .skill-block svg {
   display: block;
@@ -299,7 +302,7 @@ a:hover {
 }
 #skills .skills-container .skill-block span {
   background: none;
-  font-size: clamp(0.75rem, 0.063rem + 3.056vw, 2.813rem);
+  font-size: clamp(0.938rem, 0.607rem + 1.408vw, 1.875rem);
 }
 #skills .skills-quote {
   margin-right: 26px;

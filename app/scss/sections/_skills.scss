@@ -7,7 +7,8 @@
     padding-bottom: 109px;
 
     .skills-container{
-        padding-inline: rem(30);
+        margin: auto;
+        padding-inline: rem(50);
         background: 
                 linear-gradient(180deg, rgba(205, 182, 213, 0) 0.8%, 
                  #C1AAD2 34.13%, #BFA1CA 50.13%,
@@ -25,7 +26,8 @@
         .skill-block{
             background: none;
             display: flex;
-            column-gap: 5.77px;
+            align-items: center;
+            column-gap: 40px;
 
                 svg{
                 display: block;
@@ -40,7 +42,7 @@
                 }
                 span{
                     background: none;
-                    font-size: clamp(0.75rem, 0.063rem + 3.056vw, 2.813rem);
+                    font-size:clamp(0.938rem, 0.607rem + 1.408vw, 1.875rem);
                 }
 
 
