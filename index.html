@@ -5,25 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Rokaia's space</title>
+
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./dist/style.css">
-    <title>personal website</title>
 </head>
 <body>
     <section id="head">
     <div class="nav-container">
         <nav class="navbar-items">
-            <img src="./images/svgs/logo.svg" alt="logo" id="logo"> 
 
-            <a href="#" class="nav-item">About</a>
-            <a href="#" class="nav-item">Skills</a>
-            <a href="#" class="nav-item">Projects</a>
-            <a href="#" class="nav-item">Contact</a>    
+            <a href="#about" class="nav-item">About</a>
+            <a href="#skills" class="nav-item">Skills</a>
+            <a href="#projects" class="nav-item">Projects</a>
+            <a href="#contact" class="nav-item">Contact</a>    
 
-            <button type="button" id="menu">
+            <button type="button" id="menu"  class="menu-button">
                 <svg fill="#000000" width="22px" height="22px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" role="img">
                 <path d="M.5 7.42h15v1.25H.5zm0 3.6h15v1.25H.5zm0-7.29h15v1.25H.5z"/></svg>
 
@@ -31,29 +32,27 @@
         </nav>
     </div>
     </section>
-    <section id="about">
-        <div class="about-container">
-            <div>
-            <img src="./images/svgs/pic.svg" alt="pic" class="pic"
-             width="106" height="106.17">
-            </div>
 
-            <div class="about-txt">
-                <h2>Hello World !!</h2>
-                <p id="p1">I’m Rokaia, a front-end developer<br>
-                and a web designer based in Libya.<br></p>
-                <p id="p2">I am mostly self taught,<br>
-                chack out projects I've worked on down below.
+    <section id="about" class="about">
+        <div class="about__container">
+            <div class="about__container--col1">
+                <img src="/images/logo.png" alt="logo">
+                <button class="pri-btn">
+                    <a href="#contact">Conatact me</a>
+                </button>
+            </div>
+            <div class="about__container--col2">
+                <h1>Hello World !!</h1>
+                <p class="para1"> 
+                    I’m Rokaia, front-end developer <br>
+                    and a web designer based in Libya.
                 </p>
+                <p class="para2">I am mostly self taught, chack out projects I've worked on down below ✨.</p>
             </div>
- 
-            <div class="about-imgs">
-                <button class="-btn" id="about-btn" type="button">contact me</button>
-                <img  id="dots" src="./images/svgs/dots.svg" alt="">
-            </div>
-
+        </div>
     </section>
 
+    <!--
     <section id="skills">
             <div class="skills-title titles">
                 <h1>skills();</h1>
@@ -117,32 +116,32 @@
             <img src="./images/svgs/skills-Ellipse.svg" alt="" class="skills-cicle">
             <img src="./images/svgs/quotes-skills.svg" alt="" class="skills-quote">     
         </section>
+        -->
 
     <section id="projects">
-        <div class="projects-title titles">
-            <h1>projects();</h1>
-        </div>
-
-        <div class="projects-container">
-            <div class="projects frst-proj">
+        <div class="projects__container">
+            <div class="project frst-proj">
+                <a href="#">
+                    <img src="/images/projects/gv.png" alt=""> 
+                </a>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+            </div>
+            
+            <div class="project scnd-proj">
                 <a href="#">
                     <img src="" alt="">
                 </a>
             </div>
             
-            <div class="projects scnd-proj">
+            <div class="project thrd-proj">
                 <a href="#">
                     <img src="" alt="">
                 </a>
             </div>
             
-            <div class="projects thrd-proj">
-                <a href="#">
-                    <img src="" alt="">
-                </a>
-            </div>
-            
-            <div class="projects frth-proj">
+            <div class="project frth-proj">
                 <a href="#">
                     <img src="" alt="">
                 </a>
@@ -153,6 +152,15 @@
                     more on GitHub !
                 </p>
             </div>
+    </section>
+
+    <section id="contact">
+        <h1>contacts</h1>
+        <ul>
+            <li>behance</li>
+            <li>GitHub</li>
+            <li>linkedin</li>
+        </ul>
     </section>
 
     

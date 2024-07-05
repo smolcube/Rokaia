@@ -7,12 +7,13 @@
     padding: rem(30) rem(30) rem(52.66) rem(30);
 
     @include breakpoint-up(medium){
-    padding: 30px 30px 151px 30px ;  
+    padding: 40px 90px 151px 90px ;  
     }
 }
 
 .nav-container{
-    border-bottom: 1px black solid ;
+    padding-bottom: 20px;
+    border-bottom: 2px var(--btn-color) solid ;
     a{
         display: none;
         color: var(--font-color);
@@ -27,8 +28,13 @@
     
     .navbar-items{
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: space-around;
+
+        //small screens only
+        @include breakpoint-down(small){
+        justify-content:flex-start;
+
+        }
 
         #menu{
             border: none;

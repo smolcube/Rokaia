@@ -2,31 +2,48 @@
 
 // THE PROJECTS SECTION STYLES
 
-#projects{
+.projects{
+    padding-inline: rem(15);
+    padding-block: rem(65);
 
-    
-    .projects-container{
+    &__container{
+        margin-bottom: rem(200);
+        position: relative;
         display: grid;
-        grid-template-columns: rem(297.44);
-        grid-template-rows: repeat(4, rem(259.98));
-        gap: 18px 0;
+        grid-template-columns: repeat(4, 170px);
+        grid-template-rows: repeat(1, 400px);
+        gap: 15px 9px;
         justify-content: center;
 
-        .projects{
-            background-color: var(--card-bg);
-            border-radius: 20px;
-            filter: drop-shadow(2px 4px 0px #816969);
+        //small screens only
+        @include breakpoint-down(small){
+            margin: 0 30px 40px 30px;
+            grid-template-columns: 1fr;
+            grid-template-rows: 300px;
         }
 
-        .project-footer{ 
-            margin-inline: auto;
-            margin-block: rem(36.02) rem(25);
-             
+        .project{
+            padding: 20px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 15px 15px 0px 0px;
+            background-color: #F3FBDA;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, z-index 0.3s, box-shadow 0.3s;
+
+            &:hover {
+                transform: scale(1.1);
+                z-index: 10;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            
+            }
+
             p{
-                font-weight: 400;
-                font-size: 12px;
-                line-height: 15px;
-            } 
+                font-size:11px;
+                border-top: 1px var(--btn-color) solid;
+            }
         }
     }
 }

@@ -14,11 +14,16 @@ p{
 }
 
 a{
-    text-decoration: none;
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    color: var(--white);
+    background: none;
     &:hover{
-        color: var(--white);
         cursor: pointer;
     }
+}
+
+h1{
+    font-size: clamp(1.25rem, -0.089rem + 3.571vw, 3.125rem)
 }

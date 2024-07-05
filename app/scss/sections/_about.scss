@@ -2,9 +2,82 @@
 
 // THE ABOUT SECTION STYLES
 
+.about{
+    margin-bottom: rem(100);
+    padding-inline: rem(45);
+    padding-block-end:rem(53);
+
+    @include breakpoint-up(medium){
+        padding-inline: rem(67);
+        padding-block-end: rem(102);
+
+    }
+    &__container{
+        display: grid;
+        grid-template-columns: auto minmax(0, 900px);
+
+        //small screens only
+        @include breakpoint-down(small){
+            grid-template-columns: 1fr;
+        }
+
+        &--col1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                margin-bottom: rem(10);
+                max-width: 75%;
+            }
+
+            button{
+                min-width: 50px;
+                font-size: rem(12);
+            &:hover{
+                background-color: var(--btn-color-hover);
+                cursor: pointer;
+            }
+
+            //small screens only
+            @include breakpoint-down(small){
+                margin-bottom: rem(35);
+            }
+
+            }
+        }
+
+        &--col2{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            //small screens only
+            @include breakpoint-down(small){
+                text-align: center;
+            }
+        }
+
+        h1{
+            margin-bottom: 8px;
+        }
+        .para1{
+            margin-bottom: 4px;
+            color: var(--font-color);
+            font-size: clamp(0.563rem, 0.276rem + 1.221vw, 1.375rem)
+        }
+        .para2{
+            color: var(--font-color2);
+            font-size: clamp(0.5rem, 0.324rem + 0.751vw, 1rem)
+        }
+    }
+}
+/*
 #about{
     padding-inline: rem(37);
     padding-block-end:rem(53);
+    display: flex;
 
     @include breakpoint-up(medium){
         padding-inline: rem(67);
@@ -17,9 +90,7 @@
         margin-bottom: rem(30);
         display: grid;
         grid-template-columns:1fr;
-        grid-template-rows:repeat(3,auto);
         justify-items: center;
-        align-items: center;
 
         @include breakpoint-up(medium){
             min-width: 75%;
@@ -30,8 +101,7 @@
 
         .pic{
             display: block; 
-            width: rem(126.52);
-            height: rem(126.72); 
+            width: 100%;
             margin-block-end: 18.28px;
 
             @include breakpoint-up(medium){
@@ -102,5 +172,5 @@
         }
     }
     }
-}
+}*/
 //////done ^
