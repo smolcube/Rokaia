@@ -34,3 +34,32 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.getElementById('menu');
+    const nav = document.querySelector('nav');
+    const navItems = document.querySelector('.navbar-items');
+
+    menuButton.addEventListener('click', (event) => {
+        event.stopPropagation();
+        nav.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (nav.classList.contains('active') && !nav.contains(event.target)) {
+            nav.classList.remove('active');
+        }
+    });
+
+    document.addEventListener('scroll', () => {
+        if (nav.classList.contains('active')) {
+            nav.classList.remove('active');
+        }
+    });
+
+    navItems.addEventListener('click', (event) => {
+        if (event.target.classList.contains('nav-item')) {
+            nav.classList.remove('active');
+        }
+    });
+});

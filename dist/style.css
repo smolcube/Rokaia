@@ -158,13 +158,21 @@ nav .navbar-items a:hover {
 }
 @media (max-width: 39.9375em) {
   nav .navbar-items {
+    display: none;
     flex-direction: column;
-  }
-  nav .navbar-items .navbar-items {
-    width: 35%;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 45%;
+    height: 100%;
+    background-color: var(--bg);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.263);
   }
 }
 nav #menu {
+  position: relative;
+  z-index: 1000;
   background: none;
   border: none;
   cursor: pointer;
@@ -176,6 +184,9 @@ nav #menu {
 }
 nav #menu svg:hover {
   fill: var(--btn-color-hover);
+}
+nav.active .navbar-items {
+  display: flex;
 }
 
 /*

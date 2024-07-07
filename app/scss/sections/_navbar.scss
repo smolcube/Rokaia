@@ -3,51 +3,64 @@
 
 //navigation bar styles
 
-nav{
+nav {
     width: 100vw;
     position: sticky;
     top: 0;
-    z-index: 1000; 
+    z-index: 1000;
     padding: rem(30);
     background-color: var(--bg);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-bottom: 2px var(--btn-color) solid ;
+    border-bottom: 2px var(--btn-color) solid;
 
-    @include breakpoint-up(medium){
-    padding: 40px 90px 0 ;  
+    @include breakpoint-up(medium) {
+        padding: 40px 90px 0;
     }
 
-    .navbar-items{
+    .navbar-items {
         padding-bottom: 15px;
         display: flex;
         justify-content: space-around;
 
-    a{
-        color: var(--font-color);
-      &:hover{
-        color: var(--font-color-hover);
-      }
+        a {
+            color: var(--font-color);
+            &:hover {
+                color: var(--font-color-hover);
+            }
+        }
+
+        @include breakpoint-down(small) {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 45%;
+            height: 100%;
+            background-color: var(--bg);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.263);
+        }
     }
-          @include breakpoint-down(small){
-          flex-direction: column;
-          
-          .navbar-items{
-              width: 35%;
-        }      
-    } 
-    }
-    #menu{
+
+    #menu {
+        position: relative;
+        z-index: 1000;
         background: none;
         border: none;
         cursor: pointer;
         
-        @include breakpoint-up(medium){
+        @include breakpoint-up(medium) {
             display: none;
         }
 
-       svg:hover{
-            fill:var( --btn-color-hover);
+        svg:hover {
+            fill: var(--btn-color-hover);
         }
+    }
+
+    &.active .navbar-items {
+        display: flex;
     }
 }
 /*
