@@ -3,22 +3,26 @@
 // THE ABOUT SECTION STYLES
 
 .about{
-    margin-bottom: rem(100);
-    padding-inline: rem(45);
-    padding-block-end:rem(53);
+    background-image: url("../../../images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 120px;
 
-    @include breakpoint-up(medium){
-        padding-inline: rem(67);
-        padding-block-end: rem(102);
-
+    @include breakpoint-down(small){
+        background-image:url("../../../images/sbg.png");
     }
+
     &__container{
-        display: grid;
-        grid-template-columns: auto minmax(0, 900px);
+        display: flex;
+        justify-content: center;
+        gap: 35px;
 
         //small screens only
         @include breakpoint-down(small){
-            grid-template-columns: 1fr;
+           flex-direction: column;
         }
 
         &--col1{
@@ -28,8 +32,8 @@
             align-items: center;
 
             img{
-                margin-bottom: rem(10);
-                max-width: 75%;
+                margin-bottom: rem(20);
+                max-width: 90%;
             }
 
             button{

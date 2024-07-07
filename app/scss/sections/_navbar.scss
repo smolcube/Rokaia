@@ -3,27 +3,85 @@
 
 //navigation bar styles
 
-#head{
-    padding: rem(30) rem(30) rem(52.66) rem(30);
+nav{
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+    padding: rem(30);
+    background-color: var(--bg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px var(--btn-color) solid ;
 
     @include breakpoint-up(medium){
-    padding: 40px 90px 151px 90px ;  
+    padding: 40px 90px 0 ;  
+    }
+
+    .navbar-items{
+        padding-bottom: 15px;
+        display: flex;
+        justify-content: space-around;
+
+    a{
+        color: var(--font-color);
+      &:hover{
+        color: var(--font-color-hover);
+      }
+    }
+          @include breakpoint-down(small){
+          flex-direction: column;
+          
+          .navbar-items{
+              width: 35%;
+        }      
+    } 
+    }
+    #menu{
+        background: none;
+        border: none;
+        cursor: pointer;
+        
+        @include breakpoint-up(medium){
+            display: none;
+        }
+
+       svg:hover{
+            fill:var( --btn-color-hover);
+        }
+    }
+}
+/*
+#head{
+    background-color: var(--bg);
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+    padding: rem(30);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    @include breakpoint-up(medium){
+    padding: 40px 90px 0 ;  
     }
 }
 
 .nav-container{
     padding-bottom: 20px;
     border-bottom: 2px var(--btn-color) solid ;
-    a{
-        display: none;
-        color: var(--font-color);
+    
+        a{
+          display: none;
+          color: var(--font-color);
         &:hover{
-            color: var(--font-color-hover);
+          color: var(--font-color-hover);
         }
             @include breakpoint-up(medium){
             display: block;
-            
         }
+
+            @include breakpoint-down(small){
+                display: block;
+
+            }
     }
     
     .navbar-items{
@@ -32,9 +90,14 @@
 
         //small screens only
         @include breakpoint-down(small){
-        justify-content:flex-start;
+            justify-content:flex-start;
+            flex-direction: column;
 
+            li{
+                position: absolute;
+            }
         }
+        
 
         #menu{
             border: none;
@@ -60,5 +123,6 @@
         }
     }
 
-
 }
+
+*/

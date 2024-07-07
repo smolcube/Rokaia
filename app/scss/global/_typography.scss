@@ -6,6 +6,11 @@ h4{
     margin: 0;
     padding: 0;
 }
+
+h1{
+    font-size: clamp(1.25rem, -0.089rem + 3.571vw, 3.125rem)
+}
+
 h2{
     font-size: clamp(1.25rem, 0.208rem + 4.63vw, 4.375rem);
 }
@@ -14,6 +19,7 @@ p{
 }
 
 a{
+    width: fit-content;
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -24,6 +30,6 @@ a{
     }
 }
 
-h1{
-    font-size: clamp(1.25rem, -0.089rem + 3.571vw, 3.125rem)
+ul{
+    list-style: none;
 }

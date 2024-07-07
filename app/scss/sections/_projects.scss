@@ -3,33 +3,43 @@
 // THE PROJECTS SECTION STYLES
 
 .projects{
-    padding-inline: rem(15);
-    padding-block: rem(65);
+    background: linear-gradient(to bottom, #F8FEF8,  #F8FEF8, #EFFACE);
+    padding-top: 20px;
+    //background-color: none;
 
+    &__title{
+        background-color:  #F8FEF8;
+        margin-bottom: 100px;
+        text-align: center;
+        padding: 15px 30px;
+
+    }
     &__container{
+        background: none;
         margin-bottom: rem(200);
         position: relative;
         display: grid;
         grid-template-columns: repeat(4, 170px);
         grid-template-rows: repeat(1, 400px);
-        gap: 15px 9px;
+        gap: 15px 30px;
         justify-content: center;
 
         //small screens only
         @include breakpoint-down(small){
             margin: 0 30px 40px 30px;
-            grid-template-columns: 1fr;
-            grid-template-rows: 300px;
+            grid-template-rows: repeat(1fr);
+            margin-left: 400px;
         }
 
-        .project{
+
+        &--project{
             padding: 20px;
             width: 300px;
             display: flex;
             flex-direction: column;
             align-items: center;
             border-radius: 15px 15px 0px 0px;
-            background-color: #F3FBDA;
+            background-color: #E7F5BC;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, z-index 0.3s, box-shadow 0.3s;
 
@@ -37,13 +47,53 @@
                 transform: scale(1.1);
                 z-index: 10;
                 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                background-color: #F3FBDA;
             
             }
 
-            p{
-                font-size:11px;
-                border-top: 1px var(--btn-color) solid;
+            img{
+                width: 250px;
+                background: none;
+                border-radius: 10px;
             }
+
+            .project-bg{
+                padding: 10px 10px;
+                margin-bottom: 15px;
+                background-color: #F8FEF8;
+                border-radius: 10px;
+                box-shadow: inset 0px 1px 6px 0px rgba(0, 0, 0, 0.1);
+
+            }
+            .project-info{
+                background: none;
+                border-top: 2px var(--btn-color) solid;
+
+            .project-span{
+                color: #58A985;
+                background: none;
+                font-size: 12px;
+
+            }
+            p{
+                margin-bottom: 20px;
+                font-size:12px;
+                font-weight:700;
+                background: none;
+                color: var(--font-color);
+            }
+        }
+        .project-tech{
+            ul{
+                display: flex;
+                justify-content: space-between ;
+
+                li > img{
+                    width: 30px;
+                }
+            }
+        }
         }
     }
 }
+
