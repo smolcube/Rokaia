@@ -266,7 +266,7 @@ nav.active .navbar-items {
 
 */
 .about {
-  background-image: url("../../../images/bg.png");
+  background-image: url("../../../images/bg-1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -518,7 +518,7 @@ nav.active .navbar-items {
   align-items: center;
   border-radius: 15px 15px 0px 0px;
   background-color: #E7F5BC;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: -9px -4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, z-index 0.3s, box-shadow 0.3s;
 }
 .projects__container--project:hover {
@@ -527,21 +527,21 @@ nav.active .navbar-items {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   background-color: #F3FBDA;
 }
-.projects__container--project img {
-  width: 250px;
-  background: none;
-  border-radius: 10px;
-}
 .projects__container--project .project-bg {
-  padding: 10px 10px;
+  padding: 5px 10px;
   margin-bottom: 15px;
   background-color: #F8FEF8;
   border-radius: 10px;
-  box-shadow: inset 0px 1px 6px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 1px 6px 0px rgba(0, 0, 0, 0.323);
+  background-image: url("../../../images/projects/showcase.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
 }
 .projects__container--project .project-info {
   background: none;
-  border-top: 2px var(--btn-color) solid;
 }
 .projects__container--project .project-info .project-span {
   color: #58A985;

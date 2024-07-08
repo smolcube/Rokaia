@@ -1,3 +1,5 @@
+
+///scrolling to sections
 document.addEventListener('DOMContentLoaded', function() {
     const navItems = document.querySelectorAll('.nav-item');
 
@@ -16,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+///slide-in trasition
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('section');
     
@@ -26,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     }, {
-      threshold: 0.5  // Adjust threshold as needed
+      threshold: 0.5
     });
     
     sections.forEach(section => {
@@ -35,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
 
+///navbar menu in small screens
   document.addEventListener('DOMContentLoaded', () => {
     const menuButton = document.getElementById('menu');
     const nav = document.querySelector('nav');
